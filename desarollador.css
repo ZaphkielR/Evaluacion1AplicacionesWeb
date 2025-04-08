@@ -106,7 +106,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked+.toggle-label+.toggle-content {
-    max-height: 200px;
+    max-height: 500px;
     /* Ajusta según el contenido */
     padding: 0px 15px;
 }
