@@ -1,0 +1,126 @@
+body {
+    font-family: 'Teko', sans-serif;
+    margin: 0px;
+    background-color: rgb(19, 0, 2);
+    background-image: url('./assets/backgroind-desarrollador.jpg');
+    backdrop-filter: blur(20px);
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 3px 10px #F47F98;
+    animation: fadeIn 0.75s ease-in-out;
+}
+
+.portada {
+    background-image: url('./assets/desarrollador-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.portada img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    translate: 0px 100px;
+    border: 3px solid #000;
+    filter: drop-shadow(0px 0px 5px #F47F98);
+}
+
+.identificacion {
+    padding-top: 100px;
+    text-align: center;
+    animation: fadeIn 2.25s ease-in-out;
+}
+
+.identificacion h2,
+.identificacion h1 {
+    margin: 0px;
+}
+
+.social-media {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px #fff);
+    transition: all 0.5s ease;
+}
+
+.toggle-section {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: x-large;
+    animation: fadeIn 3.75s ease-in-out;
+}
+
+.toggle-section:hover {
+    filter: drop-shadow(0px 0px 5px #fff);
+    transition: all 0.5s ease;
+}
+
+.toggle-label {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 3s ease;
+    padding: 0 15px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+.toggle-label+.toggle-content {
+    max-height: 200px;
+    /* Ajusta según el contenido */
+    padding: 0px 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Sube desde abajo */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Llega a su posición final */
+    }
+}

@@ -1,0 +1,322 @@
+:root {
+    --blue: rgb(96, 178, 255);
+    --sky_blue: rgb(175, 221, 255);
+    --white: rgb(255, 236, 219);
+    --orange: rgb(255, 145, 73);
+}
+
+body {
+    font-family: "Teko", sans-serif;
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    font-family: 'Teko', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 2em;
+    font-size: 20px;
+    box-shadow: 3px 3px 5px #6f6f6f;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--sky_blue);
+    font-weight: 700;
+}
+
+p {
+    margin: 0px;
+
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--orange);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header h1 {
+    color: var(--white);
+    font-weight: 500px;
+    font-size: 30px;
+}
+
+.header div {
+    display: flex;
+    gap: 1em;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+}
+
+.stars-sction, .star, .ventas {
+    display: none;
+}
+
+.portada {
+    height: 50vh;
+    width: 100vw;
+    object-fit: cover;
+    animation: fadeIn 3s ease-in-out;
+
+}
+
+.container-cup,
+.container-dessert {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cup,
+.dessert,
+.dessert-image {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em 5em;
+    overflow: hidden;
+}
+
+.cup {
+    background-color: var(--sky_blue);
+}
+
+.cup img {
+    width: 100vw;
+}
+
+.cup p,
+.dessert p {
+    text-align: center;
+    font-size: large;
+}
+
+.cup button {
+    font-size: 20px;
+    padding-inline: 2em;
+}
+
+
+.dessert-image img {
+    width: 80vw;
+    object-fit: cover;
+    height: 40vh;
+    box-shadow: 5px 5px 5px var(--orange);
+}
+
+.container-dessert {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.dessert-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.dessert-image {
+    background-image: url('./assets/wave.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.container-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    height: 175vh;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px var(--orange);
+    border: #6f6f6f;
+    text-align: center;
+
+}
+
+.container-comment img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    padding: 3em 0px;
+}
+
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.social-media {
+    display: flex;
+    gap: 1em;
+}
+
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-media img:hover {
+    filter: drop-shadow(0px 0px 5px var(--white));
+}
+
+.social-media-container a:hover {
+    filter: drop-shadow(0px 0px 5px var(--white));
+}
+
+footer h3 {
+    font-size: xx-large;
+}
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 25px;
+    }
+
+    .ventas {
+        display: flex;
+    }
+
+    .container-dessert,
+    .container-cup {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .cup,
+    .portada,
+    .dessert-image,
+    .dessert {
+        display: flex;
+        overflow: hidden;
+        width: 50vw;
+        padding: 0px;
+    }
+
+    .dessert p,
+    .cup p {
+        font-size: 25px;
+        padding: 0em 2em;
+    }
+
+    .container-cup {
+        flex-direction: row-reverse;
+    }
+
+    .container-dessert img {
+        width: 30vw;
+    }
+
+    .cup-mask {
+        display: flex;
+        position: absolute;
+        translate: 20vw 20vh;
+        width: 30vw;
+        height: 30vh;
+        mask: url('./assets/mancha.png') no-repeat center/ contain;
+        background-color: var(--orange);
+    }
+
+    .stars-section {
+        display: flex;
+        display: flex;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .stars-section .star {
+        display: flex;
+        filter: drop-shadow(0px 4px 4px var(--orange));
+        box-shadow: none;
+        width: 50px;
+        height: 50px;
+        gap: 1em;
+    }
+
+    .container-comment {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: hidden;
+        height: fit-content;
+    }
+
+    .card {
+        width: 20%;
+        font-size: x-large;
+        min-height: 650px;
+    }
+
+    
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Sube desde abajo */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* Llega a su posición final */
+    }
+}
