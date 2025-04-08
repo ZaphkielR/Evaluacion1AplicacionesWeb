@@ -44,6 +44,7 @@ h1 {
     padding: 1em;
     background-color: var(--orange);
     animation: fadeIn 1s ease-in-out;
+    border-bottom: 5px solid var(--white);
 }
 
 .header h1 {
@@ -277,6 +278,10 @@ footer h3 {
         display: flex;
         gap: 1em;
         padding: 1em;
+        backdrop-filter: blur(10px);
+        border-bottom: 5px dashed var(--orange);
+        margin-top: 5px;
+        border-radius: 15px;
     }
 
     .stars-section .star {
